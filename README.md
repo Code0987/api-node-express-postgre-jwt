@@ -37,17 +37,15 @@ npm run dev
 ```
 
 ```sh
-curl -v -X GET 'http://localhost:3000/'
+curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/'
 
-curl -v -X GET 'http://localhost:3000/token'
+curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/token'
 
-curl -v -X POST 'http://localhost:3000/token' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidG9rZW4iLCJpYXQiOjE1NjA5Mzg5MzcsImV4cCI6MTU2MTM3MDkzN30.bgx-VPGLnlUOLdP8EQHUQUh_bVJC8ZV-RJLeJVIKeAE'
+curl -v -X POST 'https://api-node-express-postgre-jwt.herokuapp.com/token' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 
-curl -v -X GET 'http://localhost:3000/branches/AXIS BANK/MUMBAI/3/1' \ 
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidG9rZW4iLCJpYXQiOjE1NjA5Mzg5MzcsImV4cCI6MTU2MTM3MDkzN30.bgx-VPGLnlUOLdP8EQHUQUh_bVJC8ZV-RJLeJVIKeAE'
+curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branch/ABHY0065022' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 
-curl -v -X GET 'http://localhost:3000/branch/ABHY0065022' \ 
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidG9rZW4iLCJpYXQiOjE1NjA5Mzg5MzcsImV4cCI6MTU2MTM3MDkzN30.bgx-VPGLnlUOLdP8EQHUQUh_bVJC8ZV-RJLeJVIKeAE'
+curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branches/AXIS BANK/MUMBAI/3/1' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
+
 
 ```

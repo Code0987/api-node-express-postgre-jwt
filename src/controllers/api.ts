@@ -44,8 +44,7 @@ apiRouter.get('/branch/:ifsc', verifyToken, async (req: Request, res: Response) 
     let result = await db.query(
       'SELECT ifsc, branch, address, city, district, state ' +
       'FROM branches ' +
-      'WHERE ifsc=$1;' +
-      'LIMIT $2 OFFSET $3' +
+      'WHERE ifsc=$1' +
       ';',
       [ifsc]
     );
