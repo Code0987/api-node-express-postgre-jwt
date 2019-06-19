@@ -9,7 +9,7 @@ const config = {
   env: env,
   production: production,
   serviceName: process.env.SERVICENAME || 'app',
-  port: Number(process.env.PORT) || 3000,
+  port: process.env.PORT || 3000,
   loggerLevel: 'debug',
   db: {
     url: process.env.DATABASE_CONNECTION_POOL_URL || process.env.DATABASE_URL || '',
