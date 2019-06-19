@@ -1,0 +1,35 @@
+{
+  "name": "src",
+  "description": "",
+  "version": "0.0.1",
+  "author": "code0987",
+  "license": "MIT",
+  "engines": {
+    "node": "11.15.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=production node build/app.js",
+    "dev": "npm run build && node build/app.js",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "async": "2.6.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.8.1",
+    "winston": "3.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^8.10.39",
+    "@types/pg": "^6.1.47",
+    "cross-env": "^5.2.0",
+    "typescript": "^2.9.2"
+  }
+}
