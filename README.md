@@ -45,7 +45,7 @@ curl -v -X POST 'https://api-node-express-postgre-jwt.herokuapp.com/token' -H 'A
 
 curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branch/ABHY0065022' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 
-curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branches/AXIS BANK/MUMBAI/3/1' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
+curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branches/AXIS%20BANK/MUMBAI/3/1' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 
 
 ```
