@@ -51,12 +51,12 @@ POST /token - Decodes token and returns the decoded data
 curl -v -X POST 'https://api-node-express-postgre-jwt.herokuapp.com/token' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 ```
 
-GET /branch/<IFSC> - Returns the branch found with given IFSC
+GET /branch/{IFSC} - Returns the branch found with given IFSC
 ```sh
 curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branch/ABHY0065022' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 ```
 
-GET /branches/<Bank name>/<City>/<Limit>?/<Offset>? - Returns the paginated list of branches found with given bank name and city
+GET /branches/{Bank name}/{City}/{Limit}?/{Offset}? - Returns the paginated list of branches found with given bank name and city
 ```sh
 curl -v -X GET 'https://api-node-express-postgre-jwt.herokuapp.com/branches/AXIS%20BANK/MUMBAI/3/1' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MDk0ODE3MSwiZXhwIjoxNTYxMzgwMTcxfQ.EwDY_IhkvpFaVaNuI5EnQt0w67y2UZV_h4ZNW7rxSkI'
 ```
