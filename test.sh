@@ -1,7 +1,7 @@
 #!/bin/bash
 
-api="http://localhost:3000" # "https://api-node-express-postgre-jwt.herokuapp.com"
-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MTM4NTg4MSwiZXhwIjoxNTYxODE3ODgxfQ.zGvaN04wAAYsFrQ0wkL7hCXz_g5xa5NmF-lcsKytw60"
+api="https://api-node-express-postgre-jwt.herokuapp.com" # "http://localhost:3000"
+token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MTM4OTMzNSwiZXhwIjoxNTYxODIxMzM1fQ.4pZS_pRl9SSg-xcAzKlwDwsdqUvQPKgUg0yXIbzoCJY" # "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoicGF5bG9hZCIsImlhdCI6MTU2MTM4NTg4MSwiZXhwIjoxNTYxODE3ODgxfQ.zGvaN04wAAYsFrQ0wkL7hCXz_g5xa5NmF-lcsKytw60"
 
 h_auth="Authorization: Bearer $token"
 

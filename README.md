@@ -46,4 +46,4 @@ GET /branch?ifsc={IFSC} - Returns the branch found with given IFSC
 
 GET /branches?name={Bank name}&city={City}&limit={Limit}&offset={Offset} - Returns the paginated list of branches found with given bank name and city
 
-Test curl @ [test.sh](./tesh.sh)
+Test curl @ [test.sh](./test.sh)
