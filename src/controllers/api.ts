@@ -32,14 +32,14 @@ apiRouter.post('/token', async (req: Request, res: Response) => {
   res.status(200).json(decoded);
 });
 
-// GET /branch/:ifsc
-apiRouter.get('/branch/:ifsc', verifyToken, async (req: Request, res: Response) => {
+// GET /branch?ifsc=
+apiRouter.get('/branch', verifyToken, async (req: Request, res: Response) => {
   try {
-    if (!(req.params.ifsc)) {
+    if (!(req.query.ifsc)) {
       throw new Error('IFSC code is required.');
     }
 
-    let ifsc = req.params.ifsc;
+    let ifsc = req.query.ifsc;
 
     let result = await db.query(
       'SELECT ifsc, branch, address, city, district, state ' +
@@ -60,20 +60,20 @@ apiRouter.get('/branch/:ifsc', verifyToken, async (req: Request, res: Response) 
   }
 });
 
-// GET /branches/:name/:city/:limit?/:offset?
-apiRouter.get('/branches/:name/:city/:limit?/:offset?', verifyToken, async (req: Request, res: Response) => {
+// GET /branches?name=&city&limit=&offset=
+apiRouter.get('/branches', verifyToken, async (req: Request, res: Response) => {
   try {
-    if (!(req.params.name)) {
+    if (!(req.query.name)) {
       throw new Error('Bank name is required.');
     }
-    if (!(req.params.city)) {
+    if (!(req.query.city)) {
       throw new Error('Bank city is required.');
     }
 
-    let name = req.params.name;
-    let city = req.params.city;
-    let limit = req.params.limit || 20; // items
-    let offset = ((req.params.offset || 1) - 1) * limit; // (page - 1) * items
+    let name = req.query.name;
+    let city = req.query.city;
+    let limit = req.query.limit || 20; // items
+    let offset = ((req.query.offset || 1) - 1) * limit; // (page - 1) * items
 
     let result = await db.query(
       'SELECT bank_name, ifsc, branch, address, city, district, state ' +
